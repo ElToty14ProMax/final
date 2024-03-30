@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Estudiantes</title>
+</head>
+<body>
+    <h1>Datos de Estudiantes</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                {% for column in column_names %}
+                <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for estudiante in estudiantes %}
+            <tr>
+                {% for value in estudiante %}
+                <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

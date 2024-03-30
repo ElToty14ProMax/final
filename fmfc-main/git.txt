@@ -1,0 +1,24 @@
+mkdir miweb
+code .
+git config --global user.name "frgattorno"
+git config --global user.email "totycraftelmejor@gmail.com"
+git config --global core.editor "code --wait"
+git config --global core.autocrlf true
+git init
+git push -f origin main 
+git commit -m ""
+git remote add origin https://git.uclv.edu.cu/frgattorno/proyecto.git
+
+El comando `git merge origin/main --allow-unrelated-histories` realiza una fusión de dos ramas que no tienen una base común, es decir, no tienen un historial de commits compartido. Esto puede suceder en situaciones donde dos repositorios han sido iniciados de forma independiente y luego se desea combinar sus historiales.
+
+Aquí está lo que hace cada parte del comando:
+
+- `git merge`: Este es el comando básico de Git para fusionar dos ramas. Normalmente, Git solo permite la fusión de ramas que tienen una base común, lo que significa que tienen un historial de commits compartido.
+
+- `origin/main`: Esto se refiere a la rama `main` en el repositorio remoto llamado `origin`. `origin` es el nombre predeterminado que Git da al repositorio remoto desde el cual clonaste o al que agregaste como remoto.
+
+- `--allow-unrelated-histories`: Esta es una opción que le dice a Git que permita la fusión de dos ramas que no tienen una base común. Sin esta opción, Git rechazará la fusión y mostrará el mensaje de error `fatal: refusing to merge unrelated histories`.
+
+Cuando ejecutas este comando, Git intentará combinar los historiales de commits de la rama local actual y la rama `main` del repositorio remoto `origin`. Si hay conflictos entre los dos historiales, Git te pedirá que los resuelvas manualmente. Una vez que los conflictos se resuelven y los cambios se confirman, el historial de commits de la rama local se actualizará para incluir tanto los commits de la rama local como los de la rama `main` del repositorio remoto.
+
+Es importante tener en cuenta que permitir la fusión de historias no relacionadas puede resultar en un historial de commits confuso si los dos repositorios tienen cambios significativos que no se superponen. Esto puede dificultar la comprensión del historial de cambios y la colaboración con otros desarrolladores. Por lo tanto, debes usar esta opción con precaución y asegurarte de que es la acción correcta para tu situación específica.

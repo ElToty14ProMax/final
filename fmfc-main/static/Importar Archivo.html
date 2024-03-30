@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importar Archivo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="Importar Archivo.css" type="text/css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <h2 class="navbar-brand" >MFC</h2>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="Interfaz Principal.html">Inicio </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="Importar Archivo.html">Importar Archivo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" >Mostrar Datos</a>
+          </li>
+        </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="MFC.html"><button class="btn btn-primary">Desconectarse</button></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <form action="#" method="">
+          <div class="form-group">
+            <label for="fileInput" class="file">Seleccionar archivo:</label>
+            <div class="input-group">
+                <input type="file" class="file-upload-input" id="fileInput" name="fileInput">
+                <label for="fileInput" class="custom-file-upload">Examinar</label>
+              </div>
+          </div>
+          <div class="form-group">
+            <label for="filePath" class="file">Path del archivo:</label>
+            <textarea class="form-control" id="filePath" rows="1" readonly></textarea>
+          </div>
+          <button type="button" class="btn btn-primary imp" onclick="importFile()">Importar</button>
+        </form>
+     </div>
+
+
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <script src="Interfaz Principal.js"></script>
+     <script src="Importar Archivo.js"></script>
+
+
+</body>
+</html>    

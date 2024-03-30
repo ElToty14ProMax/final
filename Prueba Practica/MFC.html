@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFC</title>
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="stylesheet" href="MFC.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="loginForm" class="form-group">
+            <form action="login.php" class="Autenticacion" method="post">
+                <h1 class="Login">Login</h1>
+                <button type="button" class="btn btn-link" onclick="showRegisterForm()">Registrarse</button>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="Usuario" name="Usuario" placeholder="" required>
+                    <label for="Usuario" class="Usuario">Usuario:</label>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="Password" name="Password" placeholder="" required>
+                        <label for="Password" class="Password">Contraseña:</label>
+                        <button type="button" id="passwordButton" onclick="togglePassword(event)">
+                            <span id="passwordIcon" class="material-symbols-outlined">visibility</span>
+                        </button>
+                    </div>
+                </div>                
+                <a href="Interfaz Principal.php"><button type="submit" class="btn btn-primary">Iniciar Sesión</button></a>
+                <button type="reset" class="btn btn-primary">Cancelar</button>
+            </form>
+        </div>
+        <div id="registerForm" class="form-group" style="display: none;">
+            <form action="register.php" class="Autenticacion" method="post">
+                <h1 class="Login">Registrarse</h1>
+                <button type="button" class="btn btn-link" onclick="showLoginForm()">Iniciar sesión</button>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="Usuario" name="Usuario" placeholder="" required>
+                    <label for="Usuario" class="Usuario">Usuario:</label>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="Password" name="Password" placeholder="" required>
+                        <label for="Password" class="Password">Contraseña:</label>
+                        <button type="button" id="passwordButton" onclick="togglePassword(event)">
+                            <span id="passwordIcon" class="material-symbols-outlined">visibility</span>
+                        </button>
+                    </div>
+                </div>          
+                <a href="Interfaz Principal.php"><button type="submit" class="btn btn-primary">Registrarse</button></a>
+                <button type="reset" class="btn btn-primary">Cancelar</button>
+            </form>
+        </div>
+    </div>
+    <script src="bootstrap.min.js"></script>
+    <script src="MFC.js"></script>
+    <script>
+        function showRegisterForm() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('registerForm').style.display = 'block';
+        }
+
+        function showLoginForm() {
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('registerForm').style.display = 'none';
+        }
+    </script>
+    <script type="text/javascript" src="password.es6"></script>
+</body>
+
+</html>

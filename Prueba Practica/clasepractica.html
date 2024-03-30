@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="Formulario.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <form action="#"  id="formulario" class="formulario" method="post">
+                <h2 class="Formulario">Formulario</h2>
+
+                <label for="id" class="id">ID:</label><br>
+                <input type="number" id="ID" placeholder="Introduzca su ID" required>
+                <span id="error-id" class="text-danger"></span>
+
+                <label for="nombre" class="nombre">Nombre:</label>
+                <input type="text" id="nombre"  placeholder="Nombre" required>
+                <span id="error-nombre" class="text-danger"></span>
+                
+                <label for="Apellidos" class="apellido" >Apellidos</label>
+                <input type="text" id="apellidos"  placeholder="Apellidos" required>
+                <span id="error-apellido" class="text-danger"></span>
+            
+                <label for="Phone" class="phone" >Telefono</label>
+                <input type="number" id="telefono"   placeholder="###########" required >
+                <span id="error-number" class="text-danger"></span>
+                
+                <label for="CodPostal" class="postal" >Codigo Postal</label>
+                <input type="number" id="postal"  placeholder="#####" required >
+                <span id="error-postal" class="text-danger"></span>
+                
+                
+                <button type="submit" class="btn btn-primary">Enviar datos</button>
+                <button type="reset" class="btn btn-primary">Cancelar</button>
+        </form>
+    </div>
+    
+</body>
+</html>

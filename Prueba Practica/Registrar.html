@@ -1,0 +1,32 @@
+!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="MFC.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="/Create_Account" class="Autenticacion" method="post">
+            <h1 class="Login">Create <br> Account </h1>
+            <div class="form-group">
+            <label for="Usuario" class="Usuario">Usuario:</label>
+            <input type="text" class="form-control" id="Usuario" name="Usuario" placeholder="Introduzca su Usuario" required>
+            </div>
+            <div class="form-group">
+                <label for="Password" class="Password">Contraseña:</label>
+                <input type="password" class="form-control" id="Password" name="Password" placeholder="Introduzca su Contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Crear Cuenta</button>
+            <button type="reset" class="btn btn-primary">Cancelar</button>
+        </form>
+    </div>
+    <script src="bootstrap.min.js"></script>
+    <script src="MFC.js"></script>
+</body>
+
+</html>

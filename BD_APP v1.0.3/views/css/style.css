@@ -1,0 +1,31 @@
+.encabezado{
+    background: linear-gradient(35deg,rgb(253, 129, 129),rgb(241, 40, 40),rgb(8, 8, 212));
+}
+.menu{
+    background: linear-gradient(45deg,rgb(94, 92, 92),black);
+}
+.menu li a{
+    color: white;
+}
+body{
+    background: linear-gradient(45deg,rgb(24, 23, 23),rgb(44, 44, 44),rgb(75, 74, 74));
+    min-height: 100vh;
+    height: 100%;
+}
+.container{
+    background: linear-gradient(45deg,rgba(75, 73, 73, 0.575),rgba(128, 128, 128, 0.486));
+}
+input.form-control{
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    border-bottom: solid thin rgb(224, 246, 247);
+}
+input.form-control::placeholder{
+    color: rgb(205, 206, 206);
+}
+input.form-control:focus{
+    border: none;
+    background-color: transparent;
+    border-bottom: solid thin blue;
+}

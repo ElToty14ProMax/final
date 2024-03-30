@@ -1,0 +1,170 @@
+body{
+    background-color: #b7b8c0d2;
+    background-attachment: fixed;
+}
+.btn-primary:hover{
+    background-color: #412bbed8;
+    transform: scale(1.1);
+}
+.navbar {
+    background-color: rgba(48, 46, 46, 0.863);
+}
+.navbar .navbar-nav .nav-link,
+.navbar .navbar-nav,
+.navbar .navbar-nav,
+.navbar-brand{
+    color: #007bff;
+}
+.nav-link:hover{
+    color:#412bbed8 ;
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+.btn-primary {
+    background-color: #b7b8c0d2;
+    border-color: #007bff;
+    color: #000;
+}
+.btn-primary:hover {
+    background-color: #412bbed8;
+    transition: all 0.5s;
+    transform: scale(1.1);
+
+}
+.navbar-brand{
+    color: #007bff;
+}
+.nav-link.active{
+    background-color: #014e668e;
+}
+.btn-secondary{
+    --bs-tooltip-bg: var(--bd-violet-bg);
+  --bs-tooltip-color: var(--bs-white);
+}
+
+/* Estilo para el encabezado de la tabla */
+.table thead {
+    background-color: #3d5875e0; /* Color de fondo del encabezado */
+    color: white; /* Color del texto del encabezado */
+}
+
+/* Estilo para las filas de la tabla */
+.mytable {
+   background-color: #97989bbe;
+   color: rgb(0, 0, 0);
+}
+
+.btn-danger:hover{
+    background-color: #412bbed8;
+    transition: all 0.5s;
+    transform: scale(1.1);
+}
+
+/* Estilo para las filas de la tabla cuando el mouse pasa sobre ellas */
+.table tbody tr:hover {
+    background-color: #e9ecef; /* Color de fondo al pasar el mouse */
+    transition: all 0.5s;
+    border-radius: 8%;
+}
+
+/* Estilo para los botones de "Editar" y "Eliminar" */
+.btn-primary, .btn-danger {
+    margin-right: 5px; /* Espacio entre los botones */
+}
+
+/* Estilo para la fila de "No hay datos disponibles" */
+#noDataRow {
+    background-color: #f8f9fa; /* Color de fondo */
+    color: #6c757d; /* Color del texto */
+}
+/* Estilo de la card con la info del usuario*/
+#userInfoCard {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+/* styles.css */
+
+/* Estilos existentes para #userInfoCard y #editUserForm */
+
+#editUserForm {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #f8f9fa; /* Cambia el color de fondo */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px; /* Ajusta el ancho según sea necesario */
+}
+
+/* Estilos para los botones de cierre */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Estilos específicos para el formulario de edición */
+.useredit {
+    background-color: rgba(91, 135, 165, 0.904);
+    color: rgba(241, 235, 235, 0.856);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 75%;
+    width: 300px;
+    height: 400px;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    box-shadow: 0px 0px 20px 0px rgb(0, 0, 0);
+}
+#editUserForm .form-group label {
+    color: #1a1818; /* Color del texto de las etiquetas */
+}
+
+#editUserForm .form-control {
+    border-color: #ced4da; /* Color del borde de los campos de entrada */
+}
+
+#editUserForm .btn-primary {
+    background-color: #007bff; /* Color de fondo del botón */
+    border-color: #007bff; /* Color del borde del botón */
+}
