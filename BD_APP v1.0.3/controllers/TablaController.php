@@ -14,8 +14,16 @@ class TablaController
         require_once('views/tabla_view.php');
     }
 
-    // En el controlador TablaController
-    // En la clase TablaController
+    public function agregarEstudiante($datos_estudiante)
+    {
+        $modelo = new TablaModel();
+        try {
+            $resultado = $modelo->agregarEstudiante($datos_estudiante);
+            return $resultado;
+        } catch (Exception $e) {
+            throw new Exception("Error al añadir el estudiante: " . $e->getMessage());
+        }
+    }
     public function actualizarEstudiante($id_estudiante)
     {
         // Verificar si se ha proporcionado un ID de estudiante

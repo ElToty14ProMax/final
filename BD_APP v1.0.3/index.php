@@ -6,6 +6,25 @@ $ruta = $_SERVER['REQUEST_URI'];
 $controlador = new TablaController();
 $controlador->mostrarTabla();
 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['action'] === 'registrar') {
+    $datos_estudiante = $_POST;
+    unset($datos_estudiante['action']);
+    $modelo = new TablaModel();
+
+    $resultado = $modelo->agregarEstudiante($datos_estudiante);
+
+    // Verificar si se pudo agregar el estudiante correctamente
+    if ($resultado) {
+        echo "El estudiante se añadió correctamente.";
+    } else {
+        echo "Hubo un error al añadir el estudiante.";
+    }
+} else {
+    // Mostrar la tabla de estudiantes si no se envió el formulario
+    $controlador->mostrarTabla();
+}
+
 // Verificar si se ha enviado el formulario de actualización
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['action'] === 'actualizar') {
     // Obtener los datos del formulario

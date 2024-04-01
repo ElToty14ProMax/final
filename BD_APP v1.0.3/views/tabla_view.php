@@ -20,7 +20,7 @@
 <body>
     <h1>Contenido de la Tabla</h1>
     <!-- Botón para agregar estudiante -->
-    <a href="nuevo.php" class="btn btn-primary mb-3">Añadir estudiante</a>
+    <a href="views/nuevo.php" class="btn btn-primary mb-3">Añadir estudiante</a>
     <table class="table table-bordered">
         <thead>
             <tr>
