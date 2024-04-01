@@ -1,11 +1,24 @@
 <?php
-
-require_once('controllers/TablaController.php');
+require_once('config.php');
+require_once('TablaController.php');
+require_once('TablaModel.php');
+require_once('vendor/autoload.php');
 
 $ruta = $_SERVER['REQUEST_URI'];
 $controlador = new TablaController();
 $controlador->mostrarTabla();
 
+// Verificar si se ha enviado el formulario de importación de Excel
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES['excel_file'])) {
+    $modelo = new TablaModel();
+    $resultado = $modelo->importarExcel($_FILES['excel_file']);
+
+    if ($resultado) {
+        echo "Importación exitosa.";
+    } else {
+        echo "Error al importar el archivo.";
+    }
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['action'] === 'registrar') {
     $datos_estudiante = $_POST;
@@ -60,5 +73,22 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['action']) && $_GET['acti
 
     } else {
         echo "Hubo un error al eliminar el estudiante.";
+    }
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['action']) && $_GET['action'] === 'importar_excel') {
+    // Verificar si se ha cargado un archivo
+    if (isset($_FILES['excel_file'])) {
+        $modelo = new TablaModel();
+        $resultado = $modelo->importarExcel($_FILES['excel_file']);
+
+        if ($resultado) {
+            echo "Importación exitosa.";
+        } else {
+            echo "Error al importar el archivo.";
+        }
+    } else {
+        echo "No se ha seleccionado ningún archivo.";
     }
 }
