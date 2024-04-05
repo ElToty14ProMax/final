@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
 // Verificar si se ha enviado el formulario de actualización
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['action'] === 'actualizar') {
     // Obtener los datos del formulario
-    $id_estudiante = $_POST['id_estudiante'];
+    $id_estudiante = $_POST['id'];
     $datos_actualizados = array(
         'nombre' => $_POST['nombre'],
         'edad' => $_POST['edad'],
