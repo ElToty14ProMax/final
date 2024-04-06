@@ -1,7 +1,7 @@
 <?php
 // config/database.php
 $host = 'localhost';
-$db   = 'practica';
+$db   = 'usuarios';
 $user = 'postgres';
 $pass = 'Toty*020314';
 $charset = 'utf8';

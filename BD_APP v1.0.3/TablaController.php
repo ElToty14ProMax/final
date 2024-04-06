@@ -18,6 +18,8 @@ class TablaController
             throw new Exception("Error al conectar con la base de datos: " . $e->getMessage());
         }
     }
+
+    
     public function mostrarTabla()
     {
         $modelo = new TablaModel();

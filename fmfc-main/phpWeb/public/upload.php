@@ -16,7 +16,7 @@ if (isset($_FILES['excel_file'])) {
     // Asegúrate de que los nombres de las columnas sean válidos para SQL
     $validColumnNames = array_map(function($columnName) {
         // Elimina caracteres no permitidos y asegúrate de que el nombre de la columna sea válido para SQL
-        return preg_replace("/[^A-Za-z0-9 ]/", '', $columnName);
+        return preg_replace("/[^A-Za-z0-9 ]/", '', utf8_encode($columnName)); // Utiliza utf8_encode
     }, $columnNames);
 
     // Crea la consulta SQL para crear la tabla

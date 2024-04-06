@@ -19,7 +19,7 @@ app = Flask(__name__)
 
 # Configuración de la conexión a la base de datos
 conn = psycopg2.connect(
-    host="127.0.0.1",
+    host="localhost",
     database="practica",
     user="postgres",
     password="Toty*020314"
@@ -52,7 +52,7 @@ def login():
 
         # Verificar las credenciales del usuario en la base de datos
         conn = psycopg2.connect(
-            host="127.0.0.1",
+            host="localhost",
             database="practica",
             user="postgres",
             password="Toty*020314"
@@ -88,7 +88,7 @@ def read_excel():
 
         # Conexión a la base de datos
         conn = psycopg2.connect(
-            host="127.0.0.1",
+            host="localhost",
             database="practica",
             user="postgres",
             password="Toty*020314"
@@ -148,7 +148,7 @@ def read_excel():
 
         return 'Tabla creada y registros insertados correctamente.'
     
-    return render_template("Importar Archivo.html")
+    return render_template("import.html")
 
 @app.route('/datos', methods=['GET'])
 def obtener_datos():
